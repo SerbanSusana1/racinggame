@@ -14,6 +14,7 @@ public class App
       car.color ="blue";
       car.dorCount = 4;
       car.mileage = 9.5;
+      car.fuelLevel = 50;
       car.running = true;
 
        Engine engine1 = new Engine();
@@ -25,6 +26,8 @@ public class App
       car1.name ="Mercedes";
       car1.color = "rosu";
       car1.maxSpeed = 100;
+        car1.mileage = 5.1;
+        car1.fuelLevel = 100;
       car1.running = false;
 
       Car car3 = car;
@@ -43,6 +46,10 @@ public class App
       System.out.println(car.engine);
       System.out.println("Our engine");
       System.out.println(car.engine.manufacturer);
+
+      double distance = car.accelerate(60,0.5);
+
+        System.out.println("Distance in App.main " + distance);
 
 
 
