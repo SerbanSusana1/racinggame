@@ -5,6 +5,12 @@ import java.time.LocalDate;
 public class Vehicle
 
 {
+
+
+
+
+    private static int totalCount;
+
    private String name;
    private double mileage;
    private String color;
@@ -12,6 +18,11 @@ public class Vehicle
    private boolean running;
    private double fuelLevel;
    private double traveledDistance;
+
+   public Vehicle(){
+       totalCount=totalCount+1;
+
+   }
 
     // ""has-a" relationship
 
@@ -49,6 +60,8 @@ public class Vehicle
         return distance;
 
     }
+
+
 
     public String getName() {
         return name;
@@ -112,5 +125,9 @@ public class Vehicle
 
     public void setCreateDate(LocalDate createDate) {
         this.createDate = createDate;
+    }
+
+    public static int getTotalCount() {
+        return totalCount;
     }
 }
