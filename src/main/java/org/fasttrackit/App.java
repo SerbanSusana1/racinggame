@@ -13,37 +13,37 @@ public class App
 
       Car car = new Car(engine);
 
-      car.name = "Dacia";
-      car.color ="blue";
+      car.setName("Dacia") ;
+      car.setColor("blue");
       car.dorCount = 4;
-      car.mileage = 9.5;
-      car.fuelLevel = 50;
-      car.running = true;
+      car.setMileage(9.5);
+      car.setFuelLevel(50);
+      car.setRunning(true);
 
 
 
 
       Car car1 =new Car(engine);
-      car1.name ="Mercedes";
-      car1.color = "rosu";
-      car1.maxSpeed = 100;
-        car1.mileage = 5.1;
-        car1.fuelLevel = 100;
-      car1.running = false;
+      car1.setName("Mercedes");
+      car1.setColor("rosu");
+      car1.setMaxSpeed(100);
+        car1.setMileage(5.1);
+        car1.setFuelLevel(100);
+      car1.setRunning(false);
 
       Car car3 = car;
 
-        System.out.println(car.name);
-        System.out.println(car3.name);
+        System.out.println(car.getName());
+        System.out.println(car3.getName());
       System.out.println("Changing value...");
 
-      car.name="Dacia Logan";
+      car.setName("Dacia Logan");
 
 
-      System.out.println(car.name);
-      System.out.println(car3.name);
+      System.out.println(car.getName());
+      System.out.println(car3.getName());
 
-      System.out.println(car.maxSpeed);
+      System.out.println(car.getMaxSpeed());
       System.out.println(car.engine);
       System.out.println("Our engine");
       System.out.println(car.engine.manufacturer);
