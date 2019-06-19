@@ -8,7 +8,10 @@ public class App
 {
     public static void main( String[] args )
     {
-      Car car = new Car();
+      Engine engine = new Engine();
+      engine.manufacturer = "Renault";
+
+      Car car = new Car(engine);
 
       car.name = "Dacia";
       car.color ="blue";
@@ -17,12 +20,10 @@ public class App
       car.fuelLevel = 50;
       car.running = true;
 
-       Engine engine1 = new Engine();
-       engine1.manufacturer = "Renault";
-       car.engine =engine1;
 
 
-      Car car1 =new Car();
+
+      Car car1 =new Car(engine);
       car1.name ="Mercedes";
       car1.color = "rosu";
       car1.maxSpeed = 100;
@@ -48,6 +49,7 @@ public class App
       System.out.println(car.engine.manufacturer);
 
       double distance = car.accelerate(60,0.5);
+        distance = car.accelerate(60,0.5);
 
         System.out.println("Distance in App.main " + distance);
 

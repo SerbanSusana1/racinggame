@@ -9,7 +9,7 @@ public class Car  extends AutoVehicle{
     int dorCount;
 
 
-
-
-
+    public Car(Engine engine) {
+        super(engine);
+    }
 }
