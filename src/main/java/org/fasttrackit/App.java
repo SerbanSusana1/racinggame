@@ -70,6 +70,19 @@ public class App
 
       new AutoVehicle();
 
+      new Car();
+
+      System.out.println("Today...");
+      System.out.println(car.toString());
+
+      BatMobile batMobile = new BatMobile();
+      batMobile.setName("Cheating vevicle");
+
+      batMobile.accelerate(60,1);
+      batMobile.accelerate(60);
+      car.accelerate(60,1);
+
+
 
 
 
