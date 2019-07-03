@@ -10,8 +10,9 @@ public class App
     public static void main( String[] args )
     {
 
-     // Game game = new Game();
-     //   game.start();
+     Game game = new Game();
+       game.start();
+
 
         // String pool
         String a = "test";
