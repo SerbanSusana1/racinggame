@@ -2,6 +2,7 @@ package org.fasttrackit;
 
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
@@ -48,7 +49,13 @@ public class Game {
     private int getCompetitorCountFromUser(){
         System.out.println("Please enter competitors count :");
         Scanner scanner = new Scanner(System.in);
-        return scanner.nextInt();
+        try {
+            return scanner.nextInt();
+        } catch(InputMismatchException e) {
+         throw  new RuntimeException("You enter an invalid value.");
+        }finally {
+            System.out.println("Always executed");
+        }
     }
 
     private void displayCompetitors() {
