@@ -3,6 +3,7 @@ package org.fasttrackit;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
@@ -17,7 +18,9 @@ public class Game {
 
         initiliazeTracks();
         displayTracks();
-         int competitorCount=2;
+
+         int competitorCount= getCompetitorCountFromUser();
+
          for (int i=0; i<competitorCount; i++) {
              addCompetitor();
          }
@@ -27,13 +30,25 @@ public class Game {
 
     private void addCompetitor() {
         Vehicle vehicle = new Vehicle();
-        vehicle.setName("Test");
+        vehicle.setName(getVehicleNameFromUse());
         vehicle.setFuelLevel(60);
         vehicle.setMaxSpeed(200);
         vehicle.setMileage(ThreadLocalRandom.current().nextDouble(4.5, 20));
 
         competitors.add(vehicle);
 
+    }
+
+    private  String getVehicleNameFromUse(){
+        System.out.println("Please enter vehicle name");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
+    }
+
+    private int getCompetitorCountFromUser(){
+        System.out.println("Please enter competitors count :");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
     }
 
     private void displayCompetitors() {
