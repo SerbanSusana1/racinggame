@@ -29,6 +29,46 @@ public class Game {
          }
         displayCompetitors();
 
+
+         boolean winnerNotKnow=true;
+
+         int competirorsWithoutFuel=0;
+
+         while(winnerNotKnow && competirorsWithoutFuel<competitors.size()) {
+
+
+             // enhanced for / for-each
+             for (Vehicle competitor : competitors) {
+                 double speed = getSpeedFromUser();
+                 competitor.accelerate(speed);
+
+                 if (competitor.getTraveledDistance() >= selectedTrack.getLengh()) {
+                     System.out.println("Congrats! The winer is: " + competitor.getName());
+                     winnerNotKnow=false;
+                     break;
+
+                 }
+
+                 if(competitor.getFuelLevel() <=0){
+                     competirorsWithoutFuel++;
+                 }
+
+                 // sau  competitor.accelerate(getSpeedFromUser());
+
+             }
+         }
+
+    }
+
+    private double getSpeedFromUser(){
+        System.out.println("Please enter acceleration speed :");
+        Scanner scanner = new Scanner((System.in));
+        try {
+            return scanner.nextDouble();
+        }catch (InputMismatchException e){
+            System.out.println("You have entered an invalid value");
+           return getSpeedFromUser();
+        }
     }
 
     private Track getTrackSelectByUser(){

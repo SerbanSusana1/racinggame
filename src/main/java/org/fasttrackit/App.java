@@ -1,6 +1,9 @@
 package org.fasttrackit;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Hello world!
  *
@@ -8,6 +11,15 @@ package org.fasttrackit;
 public class App 
 {
     public static void main( String[] args ) throws Exception {
+
+       // Map<String,Integer> students = new HashMap<>();
+      //  students.put("Ion Popescu",20);
+       // students.put("Ionel Popescu",21);
+
+       // System.out.println(students);
+       // System.out.println(students.get("Ion Popescu"));
+
+
 
      Game game = new Game();
        game.start();
