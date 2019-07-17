@@ -58,6 +58,10 @@ public class Game {
              }
          }
 
+     //    do {
+     //      System.out.println("Doing something");
+     //    }while(winnerNotKnow);
+
     }
 
     private double getSpeedFromUser(){
